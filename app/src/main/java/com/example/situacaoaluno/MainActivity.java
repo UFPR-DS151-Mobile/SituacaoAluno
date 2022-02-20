@@ -40,20 +40,28 @@ public class MainActivity extends AppCompatActivity {
             }
             this.name = name;
         } catch (RuntimeException e) {
+            errorName.setVisibility(View.VISIBLE);
             errorName.setText(e.getMessage());
+            return;
         }
+        errorName.setVisibility(View.GONE);
 
         try {
-            String grade1 = inputGrade2.getText().toString();
+            String grade1 = inputGrade1.getText().toString();
             if (grade1.length() == 0) {
                 throw new RuntimeException("É obrigatório informar a primeira nota");
             }
             this.grade1 = Double.parseDouble(grade1);
         } catch(NumberFormatException e) {
+            errorGrade1.setVisibility(View.VISIBLE);
             errorGrade1.setText("A Nota 1 precisa ser um número");
+            return;
         } catch (RuntimeException e) {
+            errorGrade1.setVisibility(View.VISIBLE);
             errorGrade1.setText(e.getMessage());
+            return;
         }
+        errorGrade1.setVisibility(View.GONE);
 
         try {
             String grade2 = inputGrade2.getText().toString();
@@ -62,10 +70,15 @@ public class MainActivity extends AppCompatActivity {
             }
             this.grade2 = Double.parseDouble(grade2);
         } catch(NumberFormatException e) {
+            errorGrade2.setVisibility(View.VISIBLE);
             errorGrade2.setText("A Nota 2 precisa ser um número");
+            return;
         } catch (RuntimeException e) {
+            errorGrade2.setVisibility(View.VISIBLE);
             errorGrade2.setText(e.getMessage());
+            return;
         }
+        errorGrade2.setVisibility(View.GONE);
 
         try {
             String frequency = inputFrequency.getText().toString();
@@ -74,17 +87,30 @@ public class MainActivity extends AppCompatActivity {
             }
             this.frequency = Integer.parseInt(frequency);
         } catch(NumberFormatException e) {
+            errorFrequency.setVisibility(View.VISIBLE);
             errorFrequency.setText("A frequencia precisa ser um número inteiro");
+            return;
         } catch (RuntimeException e) {
+            errorFrequency.setVisibility(View.VISIBLE);
             errorFrequency.setText(e.getMessage());
+            return;
         }
+        errorFrequency.setVisibility(View.GONE);
 
-//        callResultActivity();
+        callResultActivity();
     }
 
-//    public void callResultActivity() {
-//        Intent it = new Intent( this, ResultActivity.class);
-//
-//    }
+    public void callResultActivity() {
+        Intent it = new Intent( this, ResultActivity.class);
+
+        Bundle params = new Bundle();
+        params.putString("name", this.name);
+        params.putDouble("grade1", this.grade1);
+        params.putDouble("grade2", this.grade2);
+        params.putInt("frequency", this.frequency);
+
+        it.putExtras(params);
+        startActivity(it);
+    }
 
 }

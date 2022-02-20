@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/inputFrequency"
         app:layout_constraintTop_toBottomOf="@+id/inputFrequency" />
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="@+id/inputGrade1"
         app:layout_constraintTop_toBottomOf="@+id/inputGrade1" />
 
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="@+id/inputGrade2"
         app:layout_constraintTop_toBottomOf="@+id/inputGrade2" />
 
@@ -173,6 +176,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="@+id/inputName"
         app:layout_constraintTop_toBottomOf="@+id/inputName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
