@@ -42,13 +42,13 @@ public class ResultActivity extends AppCompatActivity {
             if (sum < 4) {
                 // reprovado por nota (não mostrar frequencia)
                 msg = "O(A) aluno(a) "+ this.name + " foi reprovado(a) por nota pois ficou com uma média final " +
-                        "de "+ sum +" , sendo necessário um mínimo de 4 pontos para ir para final";
+                        "de "+ String.format("%.1f", sum) +" , sendo necessário um mínimo de 4 pontos para ir para final";
             } else if (sum >= 7) {
                 // aprovado
-                msg = "O(A) aluno(a) "+ this.name + " foi aprovado com nota "+ sum +" e frequência de "+ this.frequency + "%";
+                msg = "O(A) aluno(a) "+ this.name + " foi aprovado com nota "+ String.format("%.1f", sum) +" e frequência de "+ this.frequency + "%";
             } else {
                 // final
-                msg = "O(A) aluno(a) "+ this.name + " foi para final com nota "+ sum +" e frequência de "+ this.frequency + "%";
+                msg = "O(A) aluno(a) "+ this.name + " foi para final com nota "+ String.format("%.1f", sum) +" e frequência de "+ this.frequency + "%";
             }
         }
         finalMsg.setText(msg);
