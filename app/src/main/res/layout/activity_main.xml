@@ -42,7 +42,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Segunda Nota"
+        android:hint="(0 a 10)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,8 +74,8 @@
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="284dp"
-        android:layout_height="35dp"
+        android:layout_width="283dp"
+        android:layout_height="43dp"
         android:layout_marginTop="16dp"
         android:text='Informe os dados do aluno e depois clique em "Enviar" para ver a situação do aluno'
         android:textAlignment="center"
@@ -126,7 +126,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Primeira Nota"
+        android:hint="(0 a 10)"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Frequência (%)"
+        android:hint="(0% a 100%)"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"

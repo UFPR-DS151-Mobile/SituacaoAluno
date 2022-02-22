@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         TextView errorGrade2 = findViewById(R.id.errorGrade2);
         TextView errorFrequency = findViewById(R.id.errorFrequency);
 
+        errorName.setVisibility(View.GONE);
+        errorGrade1.setVisibility(View.GONE);
+        errorGrade2.setVisibility(View.GONE);
+        errorFrequency.setVisibility(View.GONE);
+
 
         try {
             String name = inputName.getText().toString();
@@ -44,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
             errorName.setText(e.getMessage());
             return;
         }
-        errorName.setVisibility(View.GONE);
 
         try {
             String grade1 = inputGrade1.getText().toString();
@@ -61,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
             errorGrade1.setText(e.getMessage());
             return;
         }
-        errorGrade1.setVisibility(View.GONE);
 
         try {
             String grade2 = inputGrade2.getText().toString();
@@ -78,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
             errorGrade2.setText(e.getMessage());
             return;
         }
-        errorGrade2.setVisibility(View.GONE);
 
         try {
             String frequency = inputFrequency.getText().toString();
@@ -95,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
             errorFrequency.setText(e.getMessage());
             return;
         }
-        errorFrequency.setVisibility(View.GONE);
 
         callResultActivity();
     }
