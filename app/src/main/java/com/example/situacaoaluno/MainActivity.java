@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException("É obrigatório informar a primeira nota");
             }
             this.grade1 = Double.parseDouble(grade1);
+            if (this.grade1 < 0 || this.grade1 > 10) {
+                throw new RuntimeException("A nota precisa ser um valor entre 0 e 10");
+            }
         } catch(NumberFormatException e) {
             errorGrade1.setVisibility(View.VISIBLE);
             errorGrade1.setText("A Nota 1 precisa ser um número");
@@ -72,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException("É obrigatório informar a segunda nota");
             }
             this.grade2 = Double.parseDouble(grade2);
+            if (this.grade2 < 0 || this.grade2 > 10) {
+                throw new RuntimeException("A nota precisa ser um valor entre 0 e 10");
+            }
         } catch(NumberFormatException e) {
             errorGrade2.setVisibility(View.VISIBLE);
             errorGrade2.setText("A Nota 2 precisa ser um número");
@@ -88,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException("É obrigatório informar a frequencia");
             }
             this.frequency = Integer.parseInt(frequency);
+            if (this.frequency < 0 || this.frequency > 100) {
+                throw new RuntimeException("A frequência precisa ser um número entre 0 e 100");
+            }
         } catch(NumberFormatException e) {
             errorFrequency.setVisibility(View.VISIBLE);
             errorFrequency.setText("A frequencia precisa ser um número inteiro");
