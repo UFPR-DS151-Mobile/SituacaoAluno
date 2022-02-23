@@ -45,7 +45,7 @@ public class ResultActivity extends AppCompatActivity {
                         "de "+ String.format("%.1f", sum) +" , sendo necessário um mínimo de 4 pontos para ir para final";
             } else if (sum >= 7) {
                 // aprovado
-                msg = "O(A) aluno(a) "+ this.name + " foi aprovado com nota "+ String.format("%.1f", sum) +" e frequência de "+ this.frequency + "%";
+                msg = "O(A) aluno(a) "+ this.name + " foi aprovado(a) com nota "+ String.format("%.1f", sum) +" e frequência de "+ this.frequency + "%";
             } else {
                 // final
                 msg = "O(A) aluno(a) "+ this.name + " foi para final com nota "+ String.format("%.1f", sum) +" e frequência de "+ this.frequency + "%";
